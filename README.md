@@ -21,3 +21,6 @@ Copy the `looter.so` to the infected machine on `/lib/security`, then edit the `
 auth optional module.so
 account optional module.so
 ```
+# centos 
+Centos需要把so文件丢到/lib64/security/里面,32位就直接丢到/lib/security/
+然后编译/etc/pam.d/sshd配置文件 语句和上面一样 model.so换成自己的文件名就好了
